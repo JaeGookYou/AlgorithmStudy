@@ -26,12 +26,6 @@ def solution(n, arr1, arr2):
             else:
                 shp.append("#")
 
-    # 2-6. 공백 겹치면 삭제
-        for l in range(1,n):
-            if shp[l-1] == " " and shp[l] == " ":
-                del shp[l-1]
-
-
     # 2-4. shp의 sharp와 공백을 합치기
         shp_line = ''.join(shp)
 
