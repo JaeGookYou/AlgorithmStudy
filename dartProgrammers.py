@@ -7,15 +7,34 @@ def solution(dartResult):
             del new_list[j]
 
     print(new_list)
-
-    for k in new_list:
+    tmp=[]
+    count=0
+    for i in range(len(new_list)):
         try:
-            a=int(k)
+            a=int(new_list[i])
         except:
+            if new_list[i]=='S':
+                new_list[i]=1
+                a=a**new_list[i]
 
+            elif new_list[i]=='D':
+                new_list[i]=2
+                a=a**new_list[i]
 
+            elif new_list[i]=='T':
+                new_list[i]=3
+                a=a**new_list[i]
 
+            elif new_list[i]=='#':
+                a=a*(-1)
+
+            elif new_list[i]=='*':
+
+            tmp.append(a)
+
+            
+    print(tmp)
 
     answer = 0
     return answer
-solution('1D2S#10S')
+solution('1T2D3D#')
